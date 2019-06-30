@@ -1,12 +1,42 @@
-body {
+body, * {
     font-family: Arial;
+    box-sizing: border-box;
+    margin: 0;
   }
   .container {
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template: 100px 1fr 100px / 1fr 2fr;
+    grid-template-areas: "header  header"
+                         "left content" 
+                         "footer footer";
+   grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    grid-gap: 10px 10px; 
+    height: 100vh;
+
   }
   .item {
     background: lightblue;
     padding: 10px;
     border: 1px solid red;
   }
+
+.container >.item:nth-of-type(4) {
+    background-color: blue;
+    overflow: auto;
+    display: grid;
+    grid-template:  30px  30px 30px /  20px 20px 20px; 
+  }
+
+
+  .item .item {
+      background-color: yellow;
+  }
+
+
+.header {
+  grid-area: header;
+}
+.content { grid-area: content;}
+.left { grid-area: left;}
+.footer { grid-area: footer ;}
