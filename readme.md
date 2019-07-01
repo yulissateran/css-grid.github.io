@@ -49,3 +49,42 @@ define el ancho minimo y máximo de una columna o fila en grid
 
 
 fr: designa una fraccion del grid
+    /* grid-template-areas: "header  header"
+                         "left content" 
+                         "footer footer"; */
+   /* grid-column-gap: 10px;
+    grid-row-gap: 10px;  */
+
+
+    define las lineas de inicio y fin de una celda grid 
+    grid-column-end: 3;
+-1 // hata la ultima linea
+
+
+## nombres de lineas
+
+grid-template-rows: [inicio] 1fr [linea2] 1fr [final];
+
+## grid implicito
+
+grid-auto-flow
+grid-auto-coumn
+grid-auto-row<<>>
+
+
+alinear un elemento: 
+
+.item:nth-of-type(5) {
+  align-self: start;
+  align-self: start;
+}
+
+
+alinear celdas:
+
+justify-items: center;
+    /* align-items: start end center stretch; */
+    align-items: center;
+
+    /* justify-items: start end center stretch; */
+    /* align-items: start end center stretch; */

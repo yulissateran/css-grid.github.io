@@ -1,0 +1,22 @@
+body, * {
+    font-family: Arial;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .container {
+    display: grid;
+    grid-template: repeat(3,100px) / repeat(4 ,100px);
+    grid-gap: 5px;
+    height: 100vh;
+  /*justify-content: start end center stretch space-around space-between space space-evenly */
+    justify-content: center;
+    align-content: center;
+ }
+  .item {
+    background: lightblue;
+    border: 1px solid red;
+  }
+
+
+
+
